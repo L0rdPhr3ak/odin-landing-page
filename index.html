@@ -13,7 +13,7 @@
         <div class="container">
             <div class="logo">Header Logo</div>
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="#">Header Link One</a></li>
                     <li><a href="#">Header Link Two</a></li>
                     <li><a href="#">Header Link Three</a></li>
@@ -27,11 +27,13 @@
             <div class="container">
                 <div class="hero-content">
                     <h1>This website is awesome</h1>
-                    <p>This website has some subtext that goes here under the main title. It's a smaller font and the
-                        color is lower contrast.</p>
-                    <button class="hero-button">Sign up</button>
+                    <p class="hero-text">This website has some subtext that goes here under the main title. It's a
+                        smaller font and the color is lower contrast.</p>
+                    <button type="button" class="btn primary">Sign up</button>
                 </div>
-                <img src="https://unsplash.it/700/400?image=1010" alt="placeholder image" class="hero-image">
+                <div class="hero-image-container">
+                    <img src="https://unsplash.it/700/400?image=1010" alt="placeholder image">
+                </div>
             </div>
         </section>
         <section class="info">
@@ -72,11 +74,13 @@
         </section>
         <section class="cta">
             <div class="container">
-                <div class="cta-content">
-                    <h3>Call to action! It's time!</h3>
-                    <p>Sign up for our product by clicking that button right over there!</p>
+                <div class="cta-blue-box">
+                    <div class="cta-text">
+                        <h3>Call to action! It's time!</h3>
+                        <p>Sign up for our product by clicking that button right over there!</p>
+                    </div>
+                    <button type="button" class="btn secondary">Sign up</button>
                 </div>
-                <button>Sign up</button>
             </div>
         </section>
     </main>
