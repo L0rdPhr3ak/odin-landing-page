@@ -1,3 +1,4 @@
+/* 1. BASE STYLES */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *,
@@ -11,17 +12,42 @@
 body {
     font-family: Roboto, sans-serif;
     line-height: 1.5;
+    color: #1F2937;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-header,
-.hero,
-footer {
+/* 2. REUSABLE COMPONENTS (Buttons) */
+.btn {
+    padding: 8px 32px;
+    border-radius: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn.primary {
+    background-color: #3882F6;
+    color: white;
+}
+
+.btn.secondary {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9
+}
+
+/* 3. HEADER, HERO, FOOTER (Shared Backgrounds) */
+header, .hero, footer {
     background-color: #1F2937;
     color: #F9FAF8;
 }
@@ -37,53 +63,83 @@ header .container {
 }
 
 .logo {
-    color: #F9FAF8;
     font-size: 24px;
     font-weight: 900;
 }
 
-nav {
+.nav-links {
     display: flex;
+    list-style: none;
     gap: 24px;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: #E5E7EB;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* 4. HERO SECTION */
+.hero {
+    padding: 100px 0;
 }
 
 .hero .container {
     display: flex;
-    justify-content: space-evenly;
-    gap: 24px;
-    padding: 90px 20px;
+    gap: 48px;
+    align-items: center;
 }
 
 .hero-content {
-    display: flex;
-    flex-direction: column;
     flex: 1;
-    gap: 16px;
-    color: #E5E7EB;
-    font-size: 18px;
 }
 
 .hero-content h1 {
     font-size: 48px;
     font-weight: 900;
-    line-height: 1.25;
+    margin-bottom: 8px;
+    line-height: 1.2;
 }
 
+.hero-text {
+    font-size: 18px;
+    color: #E5E7EB;
+    margin-bottom: 24px;
+}
+
+.hero-image-container {
+    flex: 1;
+    background-color: #6d747d;
+    display: flex;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 5. INFO SECTION */
 .info {
-    padding: 48px 90px 90px;
+    padding: 80px 0;
 }
 
 .info h2 {
-    color: #1F2937;
     font-size: 36px;
     font-weight: 900;
     text-align: center;
-    padding-bottom: 48px;
+    margin-bottom: 48px;
 }
 
 .card-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
 }
 
 .card {
@@ -97,55 +153,51 @@ nav {
 .card img {
     border: 4px solid #3882F6;
     border-radius: 15px;
+    width: 100%;
+    margin-bottom: 16px;
 }
 
+/* 6. QUOTE SECTION */
 .quotes {
     background-color: #E5E7EB;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 90px 0;
-}
-
-.quotes .container {
-    margin: 0 auto;
+    padding: 100px 0;
 }
 
 .quote {
     display: flex;
     flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .quote blockquote {
-    color: #1F2937;
     font-size: 36px;
     font-weight: 300;
-    font-style: oblique;
-    max-width: 780px;
+    font-style: italic;
+    color: #1F2937;
 }
 
 .quote p {
     font-size: 24px;
     font-weight: 900;
     align-self: flex-end;
-    padding: 0 40px;
+    margin-top: 8px;
 }
 
-.cta .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 125px;
-    background-color:#3882F6;
-    color:#E5E7EB;
-    border-radius: 15px;
-    padding: 45px 80px;
-    margin: 90px auto;
+/* 7. CTA SECTION */
+.cta {
+    padding: 100px 0;
 }
 
-.cta-content {
+.cta-blue-box {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    padding: 50px 100px;
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
 
 .cta h3 {
@@ -154,41 +206,11 @@ nav {
 }
 
 .cta p {
-    font-size: 18px;
     font-weight: 300;
 }
 
-button {
-    background-color: #3882F6;
-    color: #E5E7EB;
-    font-size: 18px;
-    font-weight: 900;
-    max-width: 150px;
-    max-height: 45px;
-    padding: 8px 32px;
-    border-radius: 15px;
-    border: none;
-}
-
-.cta button {
-    align-self: center;
-    border: 2px solid #E5E7EB;
-}
-
+/* 8. FOOTER */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 45px 0;
-}
-
-ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-a {
-    color: #E5E7EB;
-    text-decoration: none;
+    text-align: center;
 }
