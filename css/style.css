@@ -24,7 +24,7 @@ body {
 /* 2. REUSABLE COMPONENTS (Buttons) */
 .btn {
     padding: 8px 32px;
-    border-radius: 15px;
+    border-radius: 8px;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -193,7 +193,7 @@ footer a {
     background-color: #3882F6;
     color: #F9FAF8;
     padding: 50px 100px;
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
